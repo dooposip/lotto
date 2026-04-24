@@ -1,0 +1,38 @@
+:root {
+  --bg-dark: #0f1218;
+  --accent-blue: #00d2ff;
+  --panel-bg: #1a1f29;
+  --ball-bg: #2d3748;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: #e2e8f0;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+.app-container {
+  max-width: 1400px; /* 전체 너비를 넉넉하게 확장 */
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+.app-header { text-align: center; margin-bottom: 25px; }
+.app-header h1 { font-size: 2.2rem; margin: 0; background: linear-gradient(to right, #00d2ff, #3a7bd5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.app-header p { font-size: 0.95rem; color: #718096; margin-top: 10px; }
+
+.dashboard-grid {
+  display: grid;
+  /* 카드가 옆으로 늘어나지 않도록 최소 너비를 확보한 그리드 설정 */
+  grid-template-columns: repeat(4, minmax(300px, 1fr)); 
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1300px) { .dashboard-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .dashboard-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,102 @@
+.lotto-generator-container {
+  background: var(--panel-bg);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.mega-draw-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: #2d3748;
+  color: #00d2ff;
+  border: 2px solid #00d2ff;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: all 0.2s;
+}
+
+.mega-draw-btn:hover:not(:disabled) {
+  background: #00d2ff;
+  color: #0f1218;
+}
+
+.mega-draw-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #4a5568;
+  color: #4a5568;
+}
+
+.lines-grid-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 40px; /* 줄 간격을 10px -> 15px로, 좌우 열 간격을 30px -> 40px로 확대 */
+}
+
+.line-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px; /* 내부 여백 확대 */
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.l-idx {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #00d2ff;
+  background: rgba(0, 210, 255, 0.1);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.l-balls {
+  display: flex;
+  gap: 18px; /* 공들 사이의 간격을 12px -> 18px로 대폭 확대 */
+  justify-content: center;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.l-balls span {
+  width: 34px; /* 공 크기 살짝 확대 */
+  height: 34px;
+  background: linear-gradient(145deg, #2d3748, #1a202c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.empty-notice {
+  text-align: center;
+  padding: 50px;
+  color: #4a5568;
+  font-size: 0.95rem;
+  border: 2px dashed rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+
+@media (max-width: 850px) { /* 반응형 기준점 살짝 조정 */
+  .lines-grid-compact {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
