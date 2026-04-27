@@ -33,18 +33,23 @@
 ---
 
 ## 📂 프로젝트 구조
+
+```
 src/
 ├── components/
-│ ├── LottoGenerator.jsx
-│ ├── RandomForestCard.jsx
-│ ├── RNNCard.jsx
-│ ├── XGBoostCard.jsx
-│ └── TensorFlowCard.jsx
+│   ├── LottoGenerator.jsx
+│   ├── RandomForestCard.jsx
+│   ├── RNNCard.jsx
+│   ├── XGBoostCard.jsx
+│   └── TensorFlowCard.jsx
 ├── lib/
-│ ├── lotto.json
-│ └── utils.js
+│   ├── lotto.json
+│   └── utils.js
 ├── App.jsx
 └── main.jsx
+```
+
+
 
 ---
 
